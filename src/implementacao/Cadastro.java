@@ -15,6 +15,8 @@ public class Cadastro {
 	}
 	
 	public Comprador buscaPessoa(String nome){
+		
+		//Falta arrumar o método de busca.
 		return null;
 	}
 	

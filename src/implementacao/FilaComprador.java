@@ -12,10 +12,7 @@ public class FilaComprador {
 	}
 
 	public void remover() {
-		if (filaComprador.isEmpty())
-			System.out.println("Não há entregas para serem feitas");
-		else
-			filaComprador.remove(0);
+		filaComprador.remove(0);
 	}
 
 	public Comprador primeiro() {
