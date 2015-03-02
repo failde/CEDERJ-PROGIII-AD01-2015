@@ -2,6 +2,9 @@ package implementacao;
 
 public class Mercado implements IMercado {
 
+	private Cadastro cadastroCompradores;
+	private Cadastro cadastroVendedores;
+	
 	@Override
 	public void cadastrarComprador(String nome, String endereco) {
 
@@ -23,6 +26,8 @@ public class Mercado implements IMercado {
 	}
 
 	public Mercado() {
+		cadastroCompradores = new Cadastro();
+		cadastroVendedores = new Cadastro();
 	}
 
 }
