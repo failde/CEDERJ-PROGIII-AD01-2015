@@ -7,8 +7,11 @@ public class Cadastro {
 
 	private List<Comprador> pessoasCadastradas;
 	
-	public void inserir(Comprador pessoa) {
+	public void inserir(String nome,String endereco) {
+		Comprador comprador = new Comprador(nome,endereco);
 		
+		//Falta arrumar uma forma de inserir em ordem alfabética.
+		pessoasCadastradas.add(comprador);
 	}
 	
 	public Comprador buscaPessoa(String nome){
