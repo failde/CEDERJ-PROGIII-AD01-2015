@@ -20,7 +20,6 @@ public class Teste {
 		Vendedor Lucia = mercado.buscarVendedor("Lucia");
 		Lucia.realizarVendaPara(mercado.buscarComprador("Jose"));
 		Lucia.realizarVendaPara(mercado.buscarComprador("Maria"));
-		Lucia.proximaEntrega();
 		Lucia.realizarEntrega();
 	}
 
