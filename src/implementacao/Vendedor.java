@@ -1,28 +1,20 @@
 package implementacao;
 
-public class Vendedor extends Comprador implements IFluxoDeVendaEEntrega {
+public class Vendedor extends Pessoa implements IFluxoDeVendaEEntrega {
 
-	private FilaComprador filaComprador;
+	private Fila fila = new Fila();
 	
-	public void proximaEntrega(){
-		if (filaComprador.estaVazia())
-			System.out.println("Não há entregas a serem realizadas.");
-		else
-			System.out.println("Próxima entrega é para " + filaComprador.primeiro().getNome());
+	public Vendedor(String nome,String endereco){
+		super(nome,endereco);
 	}
 	
-	@Override
-	public void realizarVendaPara(Comprador comprador) {
-		filaComprador.inserir(comprador);
-	}
-
 	@Override
 	public void realizarEntrega() {
-		filaComprador.remover();
+		this.fila.remover();
 	}
 	
-	public Vendedor(String nome, String endereco) {
-		super(nome, endereco);
-		filaComprador = new FilaComprador();
+	public void realizarVendaPara(Comprador comprador){
+		this.fila.inserir(comprador);
 	}
+
 }
